@@ -16,7 +16,7 @@ jobs:
        uses: actions/checkout@v4
      - name: Install Kubespace
        run: curl -s
-         https://raw.githubusercontent.com/armosec/kubespace/master/install.sh | /bin/sh
+         https://raw.githubusercontent.com/armosec/kubespace/master/install.sh
          
      - name: Scan YAML files
        run: kubespace scan framework nsa *.yml

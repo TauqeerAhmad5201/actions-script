@@ -15,8 +15,11 @@ jobs:
      - name: Checkout
        uses: actions/checkout@v4
      - name: Install Kubescape
-       run: curl -s
+       run: |
          curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash
+         sudo add-apt-repository ppa:kubescape/kubescape
+         sudo apt update
+         sudo apt install kubescape
          
      - name: Scan YAML files
        run: kubescape scan framework nsa *.yml

@@ -1,5 +1,5 @@
 ---
-name: Kubespace
+name: Kubescape
 on:
   push:
     branches:
@@ -19,4 +19,4 @@ jobs:
          curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash
          
      - name: Scan YAML files
-       run: kubespace scan framework nsa *.yml
+       run: kubescape scan framework nsa *.yml
